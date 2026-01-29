@@ -1,0 +1,52 @@
+{
+  "name": "LegalNews",
+  "type": "object",
+  "properties": {
+    "headline": {
+      "type": "string",
+      "description": "News headline"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full news content"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Supreme Court",
+        "High Courts",
+        "Legislative Updates",
+        "Legal Reforms",
+        "Bar Council News",
+        "Constitutional Amendments",
+        "Legal Technology",
+        "Legal Education"
+      ]
+    },
+    "publication_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "source": {
+      "type": "string",
+      "description": "News source"
+    },
+    "related_cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "headline",
+    "content",
+    "category"
+  ]
+}
