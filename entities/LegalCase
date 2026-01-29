@@ -1,0 +1,81 @@
+{
+  "name": "LegalCase",
+  "type": "object",
+  "properties": {
+    "case_title": {
+      "type": "string",
+      "description": "Title of the legal case"
+    },
+    "court_name": {
+      "type": "string",
+      "enum": [
+        "Supreme Court of India",
+        "Delhi High Court",
+        "Bombay High Court",
+        "Madras High Court",
+        "Calcutta High Court",
+        "Karnataka High Court",
+        "Allahabad High Court",
+        "Rajasthan High Court",
+        "Gujarat High Court",
+        "Patna High Court"
+      ],
+      "description": "Court where the case was heard"
+    },
+    "case_number": {
+      "type": "string",
+      "description": "Official case reference number"
+    },
+    "judgment_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of judgment"
+    },
+    "legal_area": {
+      "type": "string",
+      "enum": [
+        "constitutional_law",
+        "corporate_law",
+        "criminal_law",
+        "civil_law",
+        "tax_law",
+        "family_law",
+        "property_law",
+        "labor_law",
+        "environmental_law",
+        "intellectual_property"
+      ],
+      "description": "Area of law"
+    },
+    "judges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of judges who presided"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief summary of the case"
+    },
+    "constitutional_articles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Relevant constitutional articles cited"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Legal keywords and topics"
+    }
+  },
+  "required": [
+    "case_title",
+    "court_name",
+    "legal_area"
+  ]
+}
